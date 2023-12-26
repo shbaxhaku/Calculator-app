@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Calcuation\Calculation;
+use App\Models\Calculation;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,7 +21,7 @@ class CalculationFactory extends Factory
 
         return [
             //
-            'expression'=> $this->generateRandomMathProblems(),
+            'first_number'=> $this->generateRandomMathProblems(),
             'result'=> $this->faker->randomFloat(2,0,10000),
         ];
 
