@@ -21,7 +21,7 @@ class CalculationFactory extends Factory
 
         return [
             //
-            'first_number'=> $this->generateRandomMathProblems(),
+            'expression'=> $this->generateRandomMathProblems(),
             'result'=> $this->faker->randomFloat(2,0,10000),
         ];
 

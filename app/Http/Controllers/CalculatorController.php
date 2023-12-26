@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Calcuation\Calculation;
+use App\Models\Calculation;
 use App\Models\Services\CalculatorService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -77,6 +77,7 @@ class CalculatorController extends Controller
 //            'expression' => 'required|numeric'
         ]);
         if ($validator->fails()) {
+            // Handle the failed validation. For example, return back with errors.
             return back()->withErrors($validator)->withInput();
         }
         $result = $request->input('result');
